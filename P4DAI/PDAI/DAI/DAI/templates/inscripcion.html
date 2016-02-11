@@ -1,0 +1,70 @@
+  		{% extends "base.html" %}
+        {% block content %}
+            {% load staticfiles %}
+
+        	<div class="panel panel-default">
+        		<div class="panel-heading">
+			    		<h3 class="panel-title"> Registrate!<small> Es gratis! x) </small>  </h3>
+			 	</div>
+			 		<div class="panel-body">
+			    		<form role="form" action="{% url 'inscripcion' %}" method="POST" enctype="multipart/form-data"> {% csrf_token %}
+
+			    			<div class="form-group">
+			    				{{form_reg.User}}
+			    		
+			    			</div>
+
+			    			<div class="row">
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			               	 			{{form_reg.Nombre}}
+			               	 			
+			    					</div>
+			    				</div>
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			    						{{form_reg.Apellidos}}
+			    					</div>
+			    				</div>
+			    			</div>
+
+			    			<div class="form-group">
+			    				{{form_reg.Email}}
+			    			</div>
+			    			<div class="row">
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			               	 			{{form_reg.Dni}}
+			    					</div>
+			    				</div>
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			    						{{form_reg.FechaNacimiento}}
+			    					</div>
+			    				</div>
+			    			</div>
+
+			    			<div class="row">
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			    						{{form_reg.Password}}
+			    					</div>
+			    				</div>
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			    						{{form_reg.ConfirmaPass}}
+			    					</div>
+			    				</div>
+			    				<div class="form-group">
+			    					{{form_reg.Visa}}
+			    				</div>
+			    			</div>
+			    			
+			    			<input type="submit" value="Register" class="btn btn-info btn-block">
+			    		
+			    		</form>
+			    	</div>
+			    </div>
+	    	
+  
+  {%endblock%}

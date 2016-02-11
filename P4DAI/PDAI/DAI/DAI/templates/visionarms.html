@@ -1,0 +1,27 @@
+{%extends "base.html"%}
+{%block content%}
+{% load staticfiles %}
+
+  <div class="thumbnail">
+  				
+                    <img class="img-responsive" id="ironman" src="/{{info.0}}" alt="">
+                    <div class="caption-full">
+
+                        <h4 class="pull-right">${{info.1}}</h4>
+                        <input type="button" value="Visitas: {{info.5}}">
+                        <h4>
+                            <a href="#">{{info.4}}</a>
+                        </h4>
+                        	<a class="aumFuente">Aumentar</a>
+                            <a class="disFuente">Disminuir</a>
+                            <a class="reiFuente">Reset</a>
+                        
+                            <p class="mitexto">{{info.3}}</p>
+                        
+                    </div>
+
+                </div>
+
+                   
+
+{%endblock%}

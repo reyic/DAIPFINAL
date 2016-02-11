@@ -1,0 +1,102 @@
+        {%extends "base.html"%}
+        {%block content%}
+
+        {% load staticfiles %}
+        
+        <div class="thumbnail">
+    
+                    <img class="img-responsive" id="ironman" src="{% static 'img/mark7.jpg' %}" alt="">
+                    <div class="caption-full">
+                        <h4 class="pull-right">$1.000.000</h4>
+                        <h4>
+                            <a href="#">Mark VII</a>
+                        </h4>
+            
+                            <a class="aumFuente">Aumentar</a>
+                            <a class="disFuente">Disminuir</a>
+                            <a class="reiFuente">Reset</a>
+                            <p></p>
+                            <p></p>
+                            <p class="mitexto">La armadura Mark 7 es una versión mejorada de la armadura de Tony Stark que él utiliza durante la batalla de Manhattan.</p> 
+                            <p class="mitexto" >Este es el segundo traje que se puede colocar sin maquinas el primero fue el Mark V.</p>
+                            <p class="mitexto">Al llegar a la Torre Stark con Loki, Tony se coloco en secreto, unas pulseras de metal con una especie de código, luego, fue lanzado por la ventana por Loki mientras J.A.R.V.I.S. lanzaba el traje Mark 7, este escaneo las pulseras de Tony, se instalo rápidamente en el y después, le disparo a Loki con sus rayos repulsores en nombre del Agente Coulson.</p>
+                        
+                        <p>Armamento:
+                            <li>Rayos Repulsores.</li>
+                            <li>Misiles.</li>
+                            <li>Minimisiles.</li>
+                            <li>Rayo Laser.</li>
+                        </p>
+
+                        
+                    </div>
+                    {% if 'username' in request.session %}
+                    <div class="ratings">
+                        <p class="pull-right">3 reviews</p>
+                        <p>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star-empty"></span>
+                            4.0 stars
+                        </p>
+                    </div>
+                </div>
+
+                <div class="well">
+
+                    <div class="text-right">
+                        <a class="btn btn-success">Leave a Review</a>
+                    </div>
+
+                    <hr>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star-empty"></span>
+                            Thor
+                            <span class="pull-right">10 days ago</span>
+                            <p>This product was great in terms of quality. I would definitely buy another!</p>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star-empty"></span>
+                            Captain
+                            <span class="pull-right">12 days ago</span>
+                            <p>I've alredy ordered another one!</p>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star-empty"></span>
+                            Rhodes
+                            <span class="pull-right">15 days ago</span>
+                            <p>I've seen some better than this, but not at this price. I definitely recommend this item.</p>
+                        </div>
+                    </div>
+
+                </div>
+                {%endif%}
+
+
+        {%endblock%}

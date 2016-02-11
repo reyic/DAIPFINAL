@@ -1,0 +1,34 @@
+{%extends "base.html"%}
+{%block content%}
+{% load staticfiles %}
+<!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Header -->
+        <div id="armaduras">
+            <div class=>
+                <h1 class="page-header">Armaduras</h1>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Projects Row -->
+        {% for x in datos %}
+        <div id="armaduras">
+            <div class="col-md-6 portfolio-item">
+                <a href="{% url 'mostrararmaduras' %}?a={{x.Nombre}}">
+                    <img class="img-responsive" src="/{{x.Imagen}}" alt="">
+                </a>
+                <h3>
+                    <a href="{% url 'mostrararmaduras' %}?a={{x.Nombre}}">{{x.Titulo}}</a>
+                </h3>
+              
+            </div>
+           
+        </div>
+        {%endfor%}
+        <!-- /.row -->
+
+       
+
+{%endblock%}
